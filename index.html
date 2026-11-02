@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#241038">
+  <title>For My Lillian 💜</title>
+  <style>
+    :root { --lavender:#d9b9f2; --pink:#f4c8e7; --cream:#fff8ff; --muted:#e7d8ef; }
+    * { box-sizing:border-box; }
+    html { scroll-behavior:smooth; }
+    body {
+      margin:0; color:var(--cream); font-family:Georgia,"Times New Roman",serif;
+      background:radial-gradient(circle at 15% 10%,rgba(176,112,222,.28),transparent 30rem),
+      radial-gradient(circle at 90% 35%,rgba(214,144,204,.16),transparent 28rem),
+      linear-gradient(145deg,#160922,#321449 52%,#1d0d30);
+      min-height:100vh; overflow-x:hidden;
+    }
+    body::before { content:"✦  ·     ✧       ·     ✦       ·    ✧"; position:fixed; inset:0; pointer-events:none; opacity:.13; color:#fff; font-size:2rem; letter-spacing:2rem; line-height:5rem; overflow:hidden; z-index:0; }
+    .wrap { width:min(1080px,calc(100% - 32px)); margin:auto; position:relative; z-index:1; }
+    header { min-height:92vh; display:grid; place-items:center; text-align:center; padding:80px 0 55px; }
+    .hero-card { width:min(800px,100%); padding:clamp(28px,6vw,62px); border:1px solid rgba(255,255,255,.22); border-radius:30px; background:linear-gradient(145deg,rgba(255,255,255,.12),rgba(255,255,255,.045)); box-shadow:0 25px 90px rgba(8,0,20,.35),inset 0 1px rgba(255,255,255,.16); backdrop-filter:blur(12px); }
+    .eyebrow { color:var(--pink); letter-spacing:.24em; text-transform:uppercase; font:600 .72rem Arial,sans-serif; }
+    h1 { font-size:clamp(3rem,9vw,6.7rem); line-height:.98; margin:22px 0 18px; font-weight:500; }
+    h1 span { color:var(--lavender); font-style:italic; }
+    .subtitle { max-width:560px; margin:0 auto; color:var(--muted); font:1.05rem/1.8 Arial,sans-serif; }
+    .heart { color:#ffb9df; font-size:1.5rem; display:inline-block; animation:pulse 1.7s infinite; }
+    @keyframes pulse { 50% { transform:scale(1.2); } }
+    .scroll { display:inline-block; margin-top:30px; color:var(--lavender); text-decoration:none; font:.82rem Arial,sans-serif; letter-spacing:.12em; }
+    section { padding:48px 0; }
+    .section-head { text-align:center; margin-bottom:28px; }
+    h2 { font-size:clamp(2rem,5vw,3rem); font-weight:500; margin:10px 0; }
+    .section-head p { color:var(--muted); font:.95rem/1.7 Arial,sans-serif; }
+    .panel { border:1px solid rgba(255,255,255,.17); border-radius:25px; background:rgba(255,255,255,.075); padding:clamp(22px,4vw,38px); box-shadow:0 18px 50px rgba(7,0,18,.22); backdrop-filter:blur(8px); }
+    .countdown { display:grid; grid-template-columns:repeat(4,1fr); gap:13px; margin:28px auto 14px; max-width:700px; }
+    .time-box { padding:20px 8px; border-radius:18px; background:linear-gradient(160deg,rgba(222,185,246,.2),rgba(255,255,255,.06)); border:1px solid rgba(255,255,255,.15); }
+    .time-box strong { display:block; font-size:clamp(2rem,6vw,3.3rem); font-weight:500; color:#fff; font-variant-numeric:tabular-nums; }
+    .time-box span { font:.72rem Arial,sans-serif; letter-spacing:.14em; color:var(--pink); text-transform:uppercase; }
+    #countdown-note { text-align:center; color:var(--lavender); font:.95rem Arial,sans-serif; margin-top:18px; }
+    .letter { max-width:780px; margin:auto; text-align:center; }
+    .letter p { color:#f8edf9; font-size:clamp(1.08rem,2.3vw,1.35rem); line-height:2; margin:0; }
+    .signature { margin-top:25px; color:var(--pink); font-size:1.35rem; font-style:italic; }
+    .media-grid { display:grid; grid-template-columns:1fr 1fr; gap:18px; }
+    .media-card h3 { font-size:1.45rem; font-weight:500; margin:0 0 8px; }
+    .media-card p,.hint { color:var(--muted); font:.9rem/1.65 Arial,sans-serif; }
+    .drop-zone { min-height:230px; border:1px dashed rgba(230,196,255,.55); border-radius:18px; display:grid; place-items:center; text-align:center; padding:18px; margin-top:18px; background:rgba(18,7,31,.25); overflow:hidden; }
+    .drop-zone input { max-width:100%; color:var(--muted); font:.85rem Arial,sans-serif; }
+    .preview-grid { display:grid; grid-template-columns:repeat(auto-fit,minmax(130px,1fr)); gap:10px; width:100%; margin-top:14px; }
+    .preview-grid img { width:100%; height:150px; object-fit:cover; border-radius:12px; border:1px solid rgba(255,255,255,.2); }
+    video { width:100%; max-height:340px; border-radius:14px; margin-top:14px; background:#100719; }
+    .closing { text-align:center; padding:70px 20px 85px; }
+    .closing h2 { color:var(--lavender); }
+    .closing p { color:var(--muted); font:1rem/1.8 Arial,sans-serif; }
+    footer { text-align:center; color:#c9afd8; padding:20px; font:.78rem Arial,sans-serif; }
+    @media(max-width:680px) { header { min-height:84vh; padding-top:48px; } .countdown { grid-template-columns:repeat(2,1fr); } .media-grid { grid-template-columns:1fr; } section { padding:34px 0; } }
+  </style>
+</head>
+<body>
+  <header class="wrap"><div class="hero-card">
+    <div class="eyebrow">A little celebration of you</div>
+    <h1>For <span>My Lillian</span></h1>
+    <p class="subtitle">For every late night, every brave moment, and every step that brought you here. This little corner of the world is yours. 💜</p>
+    <div class="heart" aria-hidden="true">♥</div><br>
+    <a class="scroll" href="#countdown">LET THE COUNTDOWN BEGIN ↓</a>
+  </div></header>
+  <main class="wrap">
+    <section id="countdown">
+      <div class="section-head"><div class="eyebrow">The day you're working towards</div><h2>Your moment is almost here</h2><p>Counting down to November 19, 2026 — the day you finish your exams.</p></div>
+      <div class="panel"><div class="countdown" aria-live="polite">
+        <div class="time-box"><strong id="days">--</strong><span>Days</span></div>
+        <div class="time-box"><strong id="hours">--</strong><span>Hours</span></div>
+        <div class="time-box"><strong id="minutes">--</strong><span>Minutes</span></div>
+        <div class="time-box"><strong id="seconds">--</strong><span>Seconds</span></div>
+      </div><div id="countdown-note">Every day is one step closer. Keep going, Lillian. ✨</div></div>
+    </section>
+    <section id="message">
+      <div class="section-head"><div class="eyebrow">A message from someone cheering you on</div><h2>You've got this, My Lillian</h2></div>
+      <div class="panel letter"><p>As you finish your exams, I just want you to know how proud I am of you. You've made it through the stressful days, the pressure and all the challenges. I hope life rewards you with everything you've been working towards. You deserve happiness, success and so much more. Never forget that someone genuinely wishes to see you win. ❤️</p><div class="signature">Always cheering you on, with love. 💜</div></div>
+    </section>
+    <section id="memories">
+      <div class="section-head"><div class="eyebrow">Little moments worth keeping</div><h2>Your memories</h2><p>Add your favourite photos and a video to make this page truly personal.</p></div>
+      <div class="media-grid">
+        <div class="panel media-card"><h3>Our photo corner 📸</h3><p>Choose photos to display in this gallery. You can select more than one.</p>
+          <div class="drop-zone"><div><div style="font-size:2rem">✧</div><label for="photos">Choose Lillian's photos</label><br><br><input id="photos" type="file" accept="image/*" multiple><div class="preview-grid" id="photo-preview"></div></div></div>
+        </div>
+        <div class="panel media-card"><h3>A video just for you 🎬</h3><p>Add a video message, a favourite memory, or something that makes her smile.</p>
+          <div class="drop-zone"><div><div style="font-size:2rem">♡</div><label for="video-file">Choose a video</label><br><br><input id="video-file" type="file" accept="video/*"><video id="video-preview" controls hidden></video><div class="hint" id="video-hint">Your selected video will appear here.</div></div></div>
+        </div>
+      </div>
+      <p class="hint" style="text-align:center;margin-top:16px;">Photos and video are previewed in your browser only; they are not uploaded to a server.</p>
+    </section>
+    <section class="closing"><div class="heart">♥</div><h2>One more thing, My Lillian...</h2><p>No matter what the results say, your effort matters and your future is full of possibilities.<br>Take a deep breath, be proud of how far you've come, and keep believing in yourself.</p><div class="signature">Your biggest supporter. 💜</div></section>
+  </main>
+  <footer>Made with care, just for My Lillian · November 19, 2026 💜</footer>
+  <script>
+    // Counts down to the start of November 19, 2026 in the visitor's local time.
+    const target = new Date(2026,10,19,0,0,0).getTime();
+    const $ = id => document.getElementById(id);
+    function updateCountdown() {
+      const remaining = target-Date.now();
+      if(remaining<=0) { ["days","hours","minutes","seconds"].forEach(id=>$(id).textContent="00"); $("countdown-note").textContent="It's your day, My Lillian! You made it — go celebrate! 💜"; return; }
+      const days=Math.floor(remaining/86400000),hours=Math.floor((remaining%86400000)/3600000),minutes=Math.floor((remaining%3600000)/60000),seconds=Math.floor((remaining%60000)/1000);
+      $("days").textContent=String(days).padStart(2,"0"); $("hours").textContent=String(hours).padStart(2,"0"); $("minutes").textContent=String(minutes).padStart(2,"0"); $("seconds").textContent=String(seconds).padStart(2,"0");
+    }
+    updateCountdown(); setInterval(updateCountdown,1000);
+    let photoUrls=[];
+    $("photos").addEventListener("change",event=>{
+      photoUrls.forEach(URL.revokeObjectURL); photoUrls=[]; const preview=$("photo-preview"); preview.replaceChildren();
+      [...event.target.files].forEach(file=>{ if(!file.type.startsWith("image/"))return; const url=URL.createObjectURL(file); photoUrls.push(url); const img=document.createElement("img"); img.src=url; img.alt="Selected photo"; preview.appendChild(img); });
+    });
+    let videoUrl=null;
+    $("video-file").addEventListener("change",event=>{
+      const file=event.target.files[0]; if(!file)return; if(videoUrl)URL.revokeObjectURL(videoUrl);
+      videoUrl=URL.createObjectURL(file); $("video-preview").src=videoUrl; $("video-preview").hidden=false; $("video-hint").hidden=true;
+    });
+  </script>
+</body>
+</html>
