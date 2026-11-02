@@ -135,6 +135,21 @@ h1 span {
     font: 12px Arial, sans-serif;
 }
 
+.start-button {
+    padding: 15px 24px;
+    border: 1px solid #d9b9f288;
+    border-radius: 999px;
+    background: #ffffff12;
+    cursor: pointer;
+    transition: .25s ease;
+}
+
+.start-button:hover {
+    background: #b66be633;
+    box-shadow: 0 0 22px #d98cff88;
+    transform: translateY(-2px);
+}
+
 /* SECTIONS */
 
 section {
@@ -367,6 +382,12 @@ footer {
 
 <div id="stars"></div>
 
+<!-- Music begins only after she presses the start button -->
+<audio id="celebration-music" preload="auto" loop>
+    <source src="audio.mpeg" type="audio/mpeg">
+    Your browser does not support audio playback.
+</audio>
+
 <header class="wrap">
     <div class="hero">
 
@@ -386,9 +407,9 @@ footer {
 
         <div class="heart">♥</div>
 
-        <a href="#countdown" class="scroll">
-            LET THE COUNTDOWN BEGIN ↓
-        </a>
+        <button type="button" class="scroll start-button" onclick="startExperience()">
+            START THE COUNTDOWN ↓
+        </button>
 
     </div>
 </header>
@@ -654,6 +675,30 @@ for (let i = 0; i < 65; i++) {
         (10 + Math.random() * 14) + "px";
 
     stars.appendChild(star);
+}
+
+/* START MUSIC AND COUNTDOWN FROM THE SAME CLICK */
+
+let experienceStarted = false;
+
+function startExperience() {
+    if (experienceStarted) {
+        document.getElementById("countdown").scrollIntoView({ behavior: "smooth" });
+        return;
+    }
+
+    const music = document.getElementById("celebration-music");
+    music.volume = 0.65;
+
+    music.play().then(() => {
+        experienceStarted = true;
+        document.getElementById("countdown-note").textContent =
+            "The music is playing. Your countdown has begun, My Lillian! 💜";
+        document.getElementById("countdown").scrollIntoView({ behavior: "smooth" });
+    }).catch(() => {
+        document.getElementById("countdown-note").textContent =
+            "Tap START THE COUNTDOWN again to play the music. 💜";
+    });
 }
 
 /* LIVE COUNTDOWN */
